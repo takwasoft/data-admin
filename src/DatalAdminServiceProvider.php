@@ -1,6 +1,6 @@
 <?php
 
-namespace Takwasoft\DataAdmin\DataAdmin;
+namespace Takwasoft\DataAdmin;
 
 use File;
 use Illuminate\Support\ServiceProvider;
@@ -54,7 +54,7 @@ class DataAdminServiceProvider extends ServiceProvider
         $menus = [];
         if (File::exists(base_path('resources/data-admin/menus.json'))) {
             $menus = json_decode(File::get(base_path('resources/data-admin/menus.json')));
-            view()->share('laravelAdminMenus', $menus);
+            view()->share('dataAdminMenus', $menus);
         }
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Takwasoft\DataAdmin\DataAdmin;
+namespace Takwasoft\DataAdmin;
 
 use App;
 use File;
