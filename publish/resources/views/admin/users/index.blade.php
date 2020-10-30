@@ -26,8 +26,8 @@
 
                         <br/>
                         <br/>
-                        <div class="table-responsive" id="takwa-table">
-                            <table class="table">
+                        <div class="table-responsive" >
+                            <table class="table" id="takwa-table">
                                 <thead>
                                     <tr>
                                         <th>ID</th><th>Name</th><th>Email</th><th>Actions</th>

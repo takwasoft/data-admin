@@ -27,8 +27,8 @@
                         <br/>
                         <br/>
 
-                        <div class="table-responsive" id="takwa-table">
-                            <table class="table">
+                        <div class="table-responsive" >
+                            <table class="table" id="takwa-table">
                                 <tbody>
                                     <tr>
                                         <th> Key </th><td> {{ $setting->key }} </td>

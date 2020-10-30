@@ -1,6 +1,6 @@
 <?php
 
-namespace Takwasoft\DataAdmin;
+namespace Takwasoft\DataAdmin\DataAdmin;
 
 use File;
 use Illuminate\Support\ServiceProvider;
