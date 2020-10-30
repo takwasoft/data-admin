@@ -71,6 +71,7 @@ class DataAdminCommand extends Command
 
         $routes =
             <<<EOD
+            //Data admin routes start
 Route::get('admin', '{$controllerNamespace}AdminController@index');
 Route::resource('admin/roles', '{$controllerNamespace}RolesController');
 Route::resource('admin/permissions', '{$controllerNamespace}PermissionsController');
@@ -80,9 +81,9 @@ Route::resource('admin/activitylogs', '{$controllerNamespace}ActivityLogsControl
     'index', 'show', 'destroy'
 ]);
 Route::resource('admin/settings', '{$controllerNamespace}SettingsController');
-Route::get('admin/generator', ['uses' => '\Appzcoder\DataAdmin\Controllers\ProcessController@getGenerator']);
-Route::post('admin/generator', ['uses' => '\Appzcoder\DataAdmin\Controllers\ProcessController@postGenerator']);
-
+Route::get('admin/generator', ['uses' => '\Takwasoft\DataAdmin\Controllers\ProcessController@getGenerator']);
+Route::post('admin/generator', ['uses' => '\Takwasoft\DataAdmin\Controllers\ProcessController@postGenerator']);
+//Data admin routes end
 EOD;
 
         File::append($routeFile, "\n" . $routes);
