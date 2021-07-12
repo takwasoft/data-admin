@@ -27,8 +27,8 @@
                         <br/>
                         <br/>
 
-                        <div class="table-responsive" >
-                            <table class="table" id="takwa-table">
+                        <div class="table-responsive">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th>ID.</th> <th>Name</th><th>Label</th>
@@ -47,11 +47,4 @@
             </div>
         </div>
     </div>
-@endsection
-@section('scripts')
-<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
-$(function () {
-    $("#takwa-table").datatable()
-});
 @endsection

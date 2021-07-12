@@ -15,14 +15,14 @@ class DataAdminCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'data-admin:install';
+    protected $signature = 'laravel-admin:install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Install the Data Admin.';
+    protected $description = 'Install the Laravel Admin.';
 
     /**
      * Create a new command instance.
@@ -54,7 +54,7 @@ class DataAdminCommand extends Command
         }
 
         $this->info("Publishing the assets");
-        $this->call('vendor:publish', ['--provider' => 'Appzcoder\CrudGenerator\CrudGeneratorServiceProvider', '--force' => true]);
+        $this->call('vendor:publish', ['--provider' => 'Takwasoft\CrudGenerator\CrudGeneratorServiceProvider', '--force' => true]);
         $this->call('vendor:publish', ['--provider' => 'Takwasoft\DataAdmin\DataAdminServiceProvider', '--force' => true]);
         $this->call('vendor:publish', ['--provider' => 'Spatie\Activitylog\ActivitylogServiceProvider', '--tag' => 'migrations']);
 
@@ -71,7 +71,6 @@ class DataAdminCommand extends Command
 
         $routes =
             <<<EOD
-            //Data admin routes start
 Route::get('admin', '{$controllerNamespace}AdminController@index');
 Route::resource('admin/roles', '{$controllerNamespace}RolesController');
 Route::resource('admin/permissions', '{$controllerNamespace}PermissionsController');
@@ -83,7 +82,7 @@ Route::resource('admin/activitylogs', '{$controllerNamespace}ActivityLogsControl
 Route::resource('admin/settings', '{$controllerNamespace}SettingsController');
 Route::get('admin/generator', ['uses' => '\Takwasoft\DataAdmin\Controllers\ProcessController@getGenerator']);
 Route::post('admin/generator', ['uses' => '\Takwasoft\DataAdmin\Controllers\ProcessController@postGenerator']);
-//Data admin routes end
+
 EOD;
 
         File::append($routeFile, "\n" . $routes);
@@ -92,6 +91,6 @@ EOD;
         $contents = File::get(__DIR__ . '/../publish/Providers/AuthServiceProvider.php');
         File::put(app_path('Providers/AuthServiceProvider.php'), $contents);
 
-        $this->info("Successfully installed Data Admin!");
+        $this->info("Successfully installed Laravel Admin!");
     }
 }

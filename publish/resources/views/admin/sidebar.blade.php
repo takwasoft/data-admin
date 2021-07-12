@@ -1,5 +1,5 @@
 <div class="col-md-3">
-    @foreach($dataAdminMenus->menus as $section)
+    @foreach($DataAdminMenus->menus as $section)
         @if($section->items)
             <div class="card">
                 <div class="card-header">

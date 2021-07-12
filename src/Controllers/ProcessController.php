@@ -19,7 +19,7 @@ class ProcessController extends Controller
      */
     public function getGenerator()
     {
-        return view('data-admin::generator');
+        return view('laravel-admin::generator');
     }
 
     /**
@@ -90,7 +90,7 @@ class ProcessController extends Controller
         try {
             Artisan::call('crud:generate', $commandArg);
 
-            $menus = json_decode(File::get(base_path('resources/data-admin/menus.json')));
+            $menus = json_decode(File::get(base_path('resources/laravel-admin/menus.json')));
 
             $name = $commandArg['name'];
             $routeName = ($commandArg['--route-group']) ? $commandArg['--route-group'] . '/' . Str::snake($name, '-') : Str::snake($name, '-');
@@ -106,7 +106,7 @@ class ProcessController extends Controller
                 return $menu;
             }, $menus->menus);
 
-            File::put(base_path('resources/data-admin/menus.json'), json_encode($menus));
+            File::put(base_path('resources/laravel-admin/menus.json'), json_encode($menus));
 
             Artisan::call('migrate');
         } catch (\Exception $e) {

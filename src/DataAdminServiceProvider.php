@@ -46,15 +46,15 @@ class DataAdminServiceProvider extends ServiceProvider
         ]);
 
         $this->publishes([
-            __DIR__ . '/views' => base_path('resources/views/vendor/data-admin'),
+            __DIR__ . '/views' => base_path('resources/views/vendor/laravel-admin'),
         ], 'views');
 
-        $this->loadViewsFrom(__DIR__ . '/views', 'data-admin');
+        $this->loadViewsFrom(__DIR__ . '/views', 'laravel-admin');
 
         $menus = [];
-        if (File::exists(base_path('resources/data-admin/menus.json'))) {
-            $menus = json_decode(File::get(base_path('resources/data-admin/menus.json')));
-            view()->share('dataAdminMenus', $menus);
+        if (File::exists(base_path('resources/laravel-admin/menus.json'))) {
+            $menus = json_decode(File::get(base_path('resources/laravel-admin/menus.json')));
+            view()->share('DataAdminMenus', $menus);
         }
     }
 

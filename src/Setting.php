@@ -1,6 +1,6 @@
 <?php
 
-namespace Appzcoder\LaravelAdmin;
+namespace Takwasoft\DataAdmin;
 
 use App\Setting as SettingModel;
 

@@ -27,8 +27,8 @@
                         <br/>
                         <br/>
 
-                        <div class="table-responsive" >
-                            <table class="table" id="takwa-table">
+                        <div class="table-responsive">
+                            <table class="table">
                                 <tbody>
                                     <tr>
                                         <th>ID</th><td>{{ $page->id }}</td>
@@ -43,11 +43,4 @@
             </div>
         </div>
     </div>
-@endsection
-@section('scripts')
-<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
-$(function () {
-    $("#takwa-table").datatable()
-});
 @endsection
