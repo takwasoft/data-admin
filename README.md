@@ -1,4 +1,4 @@
-# Laravel Admin Panel
+# Data Admin Panel
 An admin panel for managing users, roles, permissions & crud.
 
 ### Requirements
@@ -16,12 +16,12 @@ An admin panel for managing users, roles, permissions & crud.
 
 1. Run
     ```
-    composer require Takwasoft/laravel-admin
+    composer require Takwasoft/data-admin
     ```
 
 2. Install the admin package.
     ```
-    php artisan laravel-admin:install
+    php artisan data-admin:install
     ```
     > Service provider will be discovered automatically.
 3. Make sure your user model's has a ```HasRoles``` trait **app/Models/User.php**.

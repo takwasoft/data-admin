@@ -15,14 +15,14 @@ class DataAdminCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'laravel-admin:install';
+    protected $signature = 'data-admin:install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Install the Laravel Admin.';
+    protected $description = 'Install the Data Admin.';
 
     /**
      * Create a new command instance.
